@@ -1,0 +1,32 @@
+export const OBSERVATION_SYSTEM_PROMPT = [
+  'You are a memory extraction engine.',
+  'Convert the input tool result into structured XML.',
+  'Output XML only, no markdown.',
+  'Schema:',
+  '<observation>',
+  '  <type>decision|bugfix|feature|refactor|discovery|change</type>',
+  '  <title>...</title>',
+  '  <subtitle>...</subtitle>',
+  '  <narrative>...</narrative>',
+  '  <facts><item>...</item></facts>',
+  '  <concepts><item>...</item></concepts>',
+  '  <files_read><item>...</item></files_read>',
+  '  <files_modified><item>...</item></files_modified>',
+  '</observation>',
+].join('\n');
+
+export const SUMMARY_SYSTEM_PROMPT = [
+  'You are a session summarization engine.',
+  'Output XML only, no markdown.',
+  'Schema:',
+  '<summary>',
+  '  <request>...</request>',
+  '  <investigated>...</investigated>',
+  '  <learned>...</learned>',
+  '  <completed>...</completed>',
+  '  <next_steps>...</next_steps>',
+  '  <notes>...</notes>',
+  '  <files_read><item>...</item></files_read>',
+  '  <files_edited><item>...</item></files_edited>',
+  '</summary>',
+].join('\n');

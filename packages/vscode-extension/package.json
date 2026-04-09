@@ -1,0 +1,62 @@
+{
+  "name": "@xifan-coder/vscode-extension",
+  "version": "1.0.3",
+  "description": "XiFanCoder VS Code extension prototype",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "./dist/extension.cjs",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onCommand:xifan.connectWebSocket",
+    "onCommand:xifan.sendMessage",
+    "onCommand:xifan.disconnectWebSocket"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "xifan.connectWebSocket",
+        "title": "XiFan: Connect WebSocket"
+      },
+      {
+        "command": "xifan.sendMessage",
+        "title": "XiFan: Send Message"
+      },
+      {
+        "command": "xifan.disconnectWebSocket",
+        "title": "XiFan: Disconnect WebSocket"
+      }
+    ],
+    "configuration": {
+      "title": "XiFan VSCode Prototype",
+      "properties": {
+        "xifan.websocketUrl": {
+          "type": "string",
+          "default": "ws://127.0.0.1:8787/mcp",
+          "description": "XiFanCoder MCP WebSocket endpoint used by the prototype extension."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup src/extension.ts src/websocket-client.ts --format cjs,esm --dts --clean --external vscode",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm run test:unit",
+    "test:unit": "vitest run",
+    "test:coverage": "vitest run --coverage.enabled true --coverage.provider v8 --coverage.reporter text-summary --coverage.reporter json-summary",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.85.0",
+    "@types/ws": "^8.18.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4"
+  }
+}

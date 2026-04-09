@@ -1,0 +1,77 @@
+{
+  "name": "@xifan-coder/agents",
+  "version": "1.0.3",
+  "description": "XiFan-Agents - self-evolving agent observation and memory system",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/plugin/index.js",
+  "types": "./dist/plugin/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/plugin/index.d.ts",
+      "import": "./dist/plugin/index.js"
+    }
+  },
+  "bin": {
+    "xifan-agents": "./dist/plugin/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/plugin/index.ts --format esm --dts --clean --out-dir dist/plugin && tsup --config tsup.hook.config.ts && mv dist/scripts/hook-recorder.cjs dist/scripts/hook-recorder.js",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm run test:unit && pnpm run test:integration",
+    "test:unit": "vitest run --config vitest.unit.config.ts",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "test:coverage": "vitest run --config vitest.unit.config.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter text-summary --coverage.reporter json-summary",
+    "test:watch": "vitest",
+    "sprint": "tsx src/brain/cli.ts"
+  },
+  "xifanPlugin": {
+    "name": "xifan-agents",
+    "type": "stdio",
+    "command": "node",
+    "args": [
+      "packages/xifan-agents/dist/plugin/index.js"
+    ],
+    "permissionLevel": 1,
+    "enabled": true,
+    "requireConfirmation": false,
+    "sanitizeEnv": false,
+    "timeout": 10000
+  },
+  "dependencies": {
+    "pg": "^8.11.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "@types/uuid": "^10.0.0",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4",
+    "@testcontainers/postgresql": "^10.0.0",
+    "testcontainers": "^10.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/e2ec-it/XiFanCoder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2ec-it/XiFanCoder.git",
+    "directory": "packages/xifan-agents"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "cli",
+    "coding-tool",
+    "xifan-coder"
+  ]
+}

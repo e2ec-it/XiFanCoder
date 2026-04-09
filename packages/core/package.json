@@ -1,0 +1,66 @@
+{
+  "name": "@xifan-coder/core",
+  "version": "1.0.3",
+  "description": "XiFanCoder core package - Agent Loop, LLM Driver, Tools",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm run test:unit",
+    "test:unit": "vitest run",
+    "test:coverage": "vitest run --coverage.enabled true --coverage.provider v8 --coverage.reporter text-summary --coverage.include='src/config/**' --coverage.include='src/db/**' --coverage.include='src/session/**' --coverage.thresholds.lines 80 --coverage.thresholds.functions 80 --coverage.thresholds.statements 80",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.37.0",
+    "openai": "^4.80.0",
+    "better-sqlite3": "^11.0.0",
+    "cosmiconfig": "^9.0.0",
+    "micromatch": "^4.0.8",
+    "selfsigned": "^4.0.1",
+    "ws": "^8.18.3",
+    "typescript": "^5.5.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/micromatch": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.1",
+    "tsup": "^8.0.0",
+    "vitest": "^3.2.4"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/e2ec-it/XiFanCoder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2ec-it/XiFanCoder.git",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "cli",
+    "coding-tool",
+    "xifan-coder"
+  ]
+}
