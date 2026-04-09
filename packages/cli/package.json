@@ -1,0 +1,65 @@
+{
+  "name": "@xifan-coder/cli",
+  "version": "1.0.3",
+  "description": "XiFanCoder CLI package",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "xifan-coder": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "prepare:deps": "pnpm --filter @xifan-coder/core run build && pnpm --filter @xifan-coder/plugin-bus run build && pnpm --filter @xifan-coder/mem run build",
+    "prebuild": "pnpm run prepare:deps",
+    "build": "tsup src/index.ts src/cli.ts --format esm,cjs --dts --clean",
+    "pretypecheck": "pnpm run prepare:deps",
+    "typecheck": "tsc --noEmit",
+    "pretest": "pnpm run prepare:deps",
+    "test": "pnpm run test:unit && pnpm run test:integration",
+    "test:unit": "vitest run src/__tests__/agent-runner.test.ts src/__tests__/cli.test.ts src/__tests__/commands.test.ts src/__tests__/index.test.ts src/__tests__/parse.test.ts src/__tests__/repl.test.ts src/__tests__/slash-router.test.ts src/__tests__/update-checker.test.ts",
+    "test:integration": "vitest run src/__tests__/e2e.phase1.test.ts src/__tests__/e2e.phase2.test.ts",
+    "test:coverage": "vitest run src/__tests__/agent-runner.test.ts src/__tests__/cli.test.ts src/__tests__/commands.test.ts src/__tests__/index.test.ts src/__tests__/parse.test.ts src/__tests__/repl.test.ts src/__tests__/slash-router.test.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter text-summary --coverage.reporter json-summary",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@xifan-coder/core": "workspace:*",
+    "@xifan-coder/plugin-bus": "workspace:*",
+    "@xifan-coder/mem": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/e2ec-it/XiFan-XiFanCoder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2ec-it/XiFan-XiFanCoder.git",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "cli",
+    "coding-tool",
+    "xifan-coder"
+  ]
+}

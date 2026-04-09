@@ -1,0 +1,57 @@
+{
+  "name": "@xifan-coder/plugin-bus",
+  "version": "1.0.3",
+  "description": "XiFan plugin bus package - discovery, registry and loading lifecycle",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm run test:unit && pnpm run test:integration",
+    "test:unit": "vitest run src/__tests__/manifest.test.ts src/__tests__/registry.test.ts src/__tests__/discovery.test.ts src/__tests__/plugin-bus.test.ts src/__tests__/process.test.ts",
+    "test:integration": "vitest run src/__tests__/integration.test.ts",
+    "test:coverage": "vitest run src/__tests__/manifest.test.ts src/__tests__/registry.test.ts src/__tests__/discovery.test.ts src/__tests__/plugin-bus.test.ts src/__tests__/process.test.ts --coverage.enabled true --coverage.provider v8 --coverage.reporter text-summary --coverage.reporter json-summary --coverage.thresholds.lines 75 --coverage.thresholds.functions 75 --coverage.thresholds.statements 75",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/e2ec-it/XiFan-XiFanCoder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2ec-it/XiFan-XiFanCoder.git",
+    "directory": "packages/plugin-bus"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "cli",
+    "coding-tool",
+    "xifan-coder"
+  ]
+}

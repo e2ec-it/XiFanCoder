@@ -1,0 +1,57 @@
+{
+  "name": "@xifan-coder/plugin-smoldev",
+  "version": "1.0.3",
+  "description": "XiFan smol-dev plugin for project scaffold generation",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./main": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/main.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm run test:unit",
+    "test:unit": "vitest run",
+    "test:coverage": "vitest run --coverage.enabled true --coverage.provider v8 --coverage.reporter text-summary --coverage.reporter json-summary",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/e2ec-it/XiFan-XiFanCoder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2ec-it/XiFan-XiFanCoder.git",
+    "directory": "packages/plugin-smoldev"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "cli",
+    "coding-tool",
+    "xifan-coder"
+  ]
+}
