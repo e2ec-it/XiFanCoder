@@ -2,6 +2,9 @@
 
 [![npm version](https://img.shields.io/npm/v/@xifan-coder/cli)](https://www.npmjs.com/package/@xifan-coder/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Unit Tests](https://img.shields.io/badge/unit_tests-100%25_coverage-brightgreen)](./packages)
+[![Integration Tests](https://img.shields.io/badge/integration_tests-117_cases-brightgreen)](./packages)
+[![Release Gate](https://img.shields.io/badge/release_gate-passing-brightgreen)](./packages)
 
 **XiFanCoder** 是一个可扩展的 AI Agent 编码工具 CLI，提供统一的 AI 编码体验入口，底层模型可自由切换，工具生态通过插件横向扩展。
 
@@ -199,8 +202,6 @@ make npm-publish              # 发布到 npm
 - **单元测试**：全部 9 包 100% 行覆盖率
 - **集成测试**：23 个测试文件覆盖 PRD 全部功能章节（117 用例）
 - **Release Gate**：whitebox + blackbox + blackbox-ui 三层门禁
-
-详见 [README-internal.md](./README-internal.md)。
 
 ## License
 

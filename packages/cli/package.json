@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFanCoder CLI package",
   "license": "MIT",
   "type": "module",

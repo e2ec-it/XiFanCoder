@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/plugin-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan plugin SDK - plugin interfaces and helper types",
   "license": "MIT",
   "type": "module",

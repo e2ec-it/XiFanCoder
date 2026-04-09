@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFanCoder core package - Agent Loop, LLM Driver, Tools",
   "license": "MIT",
   "type": "module",

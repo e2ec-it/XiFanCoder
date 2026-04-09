@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/agents",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan-Agents - self-evolving agent observation and memory system",
   "license": "MIT",
   "type": "module",
