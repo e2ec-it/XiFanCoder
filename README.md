@@ -6,6 +6,8 @@
 [![Integration Tests](https://img.shields.io/badge/integration_tests-117_cases-brightgreen)](./packages)
 [![Release Gate](https://img.shields.io/badge/release_gate-passing-brightgreen)](./packages)
 
+**Languages:** [简体中文](README.md) | [繁體中文](README_zh-HK.md) | [English](README_en-US.md) | [日本語](README_ja-JP.md) | [한국어](README_ko-KR.md)
+
 **XiFanCoder** 是一个可扩展的 AI Agent 编码工具 CLI，提供统一的 AI 编码体验入口，底层模型可自由切换，工具生态通过插件横向扩展。
 
 **XiFanCoder** is an extensible AI Agent CLI coding tool that provides a unified AI coding experience with freely switchable LLM backends and a horizontally scalable plugin ecosystem.
@@ -202,6 +204,13 @@ make npm-publish              # 发布到 npm
 - **单元测试**：全部 9 包 100% 行覆盖率
 - **集成测试**：23 个测试文件覆盖 PRD 全部功能章节（117 用例）
 - **Release Gate**：whitebox + blackbox + blackbox-ui 三层门禁
+
+## 多语言文档更新流程
+
+1. 编辑 `README.md`（简体中文源文件）
+2. 运行 `bash 02_scripts/sync-readme-i18n.sh --check` 检测过期翻译
+3. 在 Claude Code 中执行 `/xifan-readme-i18n` 自动重新翻译
+4. 运行 `make opensource-sync` 同步到公开仓库
 
 ## License
 
