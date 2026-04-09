@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/vscode-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFanCoder VS Code extension prototype",
   "license": "MIT",
   "private": true,

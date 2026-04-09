@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/mem",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan memory package - cross-session memory persistence and retrieval",
   "license": "MIT",
   "type": "module",

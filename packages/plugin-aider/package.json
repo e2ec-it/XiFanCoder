@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/plugin-aider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan Aider plugin for multi-file editing and git-oriented workflows",
   "license": "MIT",
   "type": "module",

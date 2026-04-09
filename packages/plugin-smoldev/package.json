@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/plugin-smoldev",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan smol-dev plugin for project scaffold generation",
   "license": "MIT",
   "type": "module",

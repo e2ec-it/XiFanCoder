@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/plugin-bus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan plugin bus package - discovery, registry and loading lifecycle",
   "license": "MIT",
   "type": "module",

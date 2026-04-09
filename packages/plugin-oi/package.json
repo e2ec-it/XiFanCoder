@@ -1,6 +1,6 @@
 {
   "name": "@xifan-coder/plugin-oi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "XiFan Open Interpreter plugin for sandboxed code execution",
   "license": "MIT",
   "type": "module",
