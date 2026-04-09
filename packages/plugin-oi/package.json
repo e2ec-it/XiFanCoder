@@ -41,10 +41,10 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "homepage": "https://github.com/e2ec-it/XiFan-XiFanCoder#readme",
+  "homepage": "https://github.com/e2ec-it/XiFanCoder#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/e2ec-it/XiFan-XiFanCoder.git",
+    "url": "git+https://github.com/e2ec-it/XiFanCoder.git",
     "directory": "packages/plugin-oi"
   },
   "keywords": [

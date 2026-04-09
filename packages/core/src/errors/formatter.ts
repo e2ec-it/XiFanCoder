@@ -55,7 +55,7 @@ export function formatErrorForUser(err: XiFanError): string {
 
     // 未知错误
     default:
-      return `发生错误（${err.code}）。如问题持续，请报告至 https://github.com/e2ec-it/XiFan-XiFanCoder/issues`;
+      return `发生错误（${err.code}）。如问题持续，请报告至 https://github.com/e2ec-it/XiFanCoder/issues`;
   }
 }
 

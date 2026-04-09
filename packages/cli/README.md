@@ -21,7 +21,7 @@ xifan-coder help
 xifan-coder init --config
 ```
 
-See the [main README](https://github.com/e2ec-it/XiFan-XiFanCoder#readme) for full documentation.
+See the [main README](https://github.com/e2ec-it/XiFanCoder#readme) for full documentation.
 
 ## License
 

@@ -174,8 +174,8 @@ xifan-coder init --config  # 自动生成
 ## 开发 / Development
 
 ```bash
-git clone https://github.com/e2ec-it/XiFan-XiFanCoder.git
-cd XiFan-XiFanCoder
+git clone https://github.com/e2ec-it/XiFanCoder.git
+cd XiFanCoder
 pnpm install
 pnpm run build
 pnpm run test

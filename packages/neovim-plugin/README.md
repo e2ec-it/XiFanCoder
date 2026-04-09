@@ -12,7 +12,7 @@ Minimal Neovim integration for XiFanCoder CLI.
 
 ```lua
 {
-  dir = "/ABSOLUTE/PATH/TO/XiFan-XiFanCoder/packages/neovim-plugin",
+  dir = "/ABSOLUTE/PATH/TO/XiFanCoder/packages/neovim-plugin",
   config = function()
     require("xifan").setup({
       cmd = "xifan",

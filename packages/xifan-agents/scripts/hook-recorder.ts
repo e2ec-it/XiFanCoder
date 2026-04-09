@@ -2,7 +2,7 @@
 /**
  * Claude Code Hook Recorder
  * 部署：cp dist/scripts/hook-recorder.js ~/.xifan/coder/hook-recorder.js
- * 配置：~/.claude/settings.json hooks.PostToolUse + hooks.Stop
+ * 配置：Agent hooks (PostToolUse + Stop)
  */
 import { Pool } from 'pg';
 import { parseHookPayload } from '../src/scripts/hook-recorder-core.js';

@@ -19,7 +19,7 @@ export default defineConfig({
         ],
       },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/e2ec-it/XiFan-XiFanCoder' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/e2ec-it/XiFanCoder' }],
   },
 });
 
